@@ -1,0 +1,19 @@
+get_cpu_info() {
+    lscpu
+}
+
+get_memory_info() {
+    free -m
+}
+
+case "$1" in
+    cpu)
+        shift
+        get_cpu_info
+        ;;
+    memory)
+        shift
+        get_memory_info
+        ;;
+
+Add to the previous script
