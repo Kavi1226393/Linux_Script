@@ -1,0 +1,34 @@
+#!/bin/bash
+
+VERSION="v0.1.0"  
+
+show_help() {
+    echo "Usage: internsctl [OPTIONS]"
+    echo "Options:"
+    echo "  --help     Display this help message."
+    echo "  --version  Display version information."
+    # Add other options and descriptions as needed.
+}
+
+show_version() {
+    echo "internsct version $VERSION"
+}
+
+case "$1" in
+    --help)
+        show_help
+        exit 0
+        ;;
+    --version)
+        show_version
+        exit 0
+        ;;
+    *)
+        # Your main script logic here.
+        echo "Hello, this is internsct!"
+        ;;
+Esac
+
+
+Save this script, make it executable with chmod +x internsct, and place it in a directory that is in PATH
+(/usr/share/man/).
